@@ -1,7 +1,6 @@
 MPU9250 on Tiva TM4C1294
 ======================
 
-<img style="width:200px;float: left;margin:10px;" src="http://des.everbuying.net/uploads/2015/201509/heditor/201509231442464706.jpg">
 
 This repository contains an example project for running MPU9250 IMU module with TM4C1294 microcontroller. __Note__ that the project is for CodeComposer studio. MPU9250 is implemented as C++ singleton.
 
