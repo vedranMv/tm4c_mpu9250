@@ -57,13 +57,13 @@ MPU9250 library provided in this example is implemented in C++ and based on the 
 
 #### DMP mode
 
-![alt tag](https://hsr.duckdns.org/images/DMP.png)
+![alt tag](https://vedran.ml/public/images/DMP.png)
 
 DMP mode uses InvenSense code to load the DMP firmware on startup and use its sensor fusion for estimating the orientation. Output rate of fusion algorithm is set to 50Hz (can be increased to 200Hz) and the code handles conversion from quaternions to Euler angles.
 
 #### Direct-sensor-reading mode
 
-![alt tag](https://hsr.duckdns.org/images/DSR.png)
+![alt tag](https://vedran.ml/public/images/DSR.png)
 
 Basic functionality is implemented in form of configuring accelerometer and gyro for 1kHz output rate, performing accelerometer and gyro calibration. Current software interface is rather simplistic and allows for reading direct sensor measurements, reboot the MPU and control its power supply. Furthermore, as mentioned above, [Mahonys' algorithm](https://github.com/PaulStoffregen/MahonyAHRS) is implemented to perform 9DOF sensor fusion and produce orientation. Core functionality of Direct-sensor-reading mode is ported from [SparkFuns' MPU9250 library](https://github.com/sparkfun/SparkFun_MPU-9250_Breakout_Arduino_Library) (but extended with SPI).
 
