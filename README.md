@@ -40,12 +40,12 @@ MPU9250 can be connected to SPI2 peripheral of Tiva evaluation kit as follows:
 MPU9250       |   EK-TM4C1294XL
 --------------|------------------
 MPU9250 SDA   | PD1(SPI2MOSI)
-MPU9250 SCL   | PN5(SPI2CLK)
+MPU9250 SCL   | PD3(SPI2CLK)
 MPU9250 INT   | PA5(GPIO)
-MPU9250 AD0   | PD2(SPI2MOSI)
+MPU9250 AD0   | PD0(SPI2MOSI)
 MPU9250 NCS   | PN2(GPIO used as slave select)
 MPU9250 VCC   | 3.3V
-MPU9250 GND   | GND
+MPU9250 GND  | GND
 
 Speed of SPI transfer is set to 1MHz. (sidenote: I have successfully tested up to 60MHz with TM4C1294 after which Tiva cannot generate the clock any more) Additionally, library implements power control functionality through pin PL4. It is meant to control external n-type MOSFET to cut the power to MPU9250. Power control signal is designed as active-high, cutting the power to MPU9250 when it's set low.
 
