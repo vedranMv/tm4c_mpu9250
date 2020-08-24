@@ -169,9 +169,10 @@ int8_t MPU9250::ReadSensorData()
     }
 
     //  Update attitude with new sensor readings
+    // MPU9250 magnetometer is oriented differently than IMU
     _ahrs.Update(_gyro[0], _gyro[1], _gyro[2],
                  _acc[0], _acc[1], _acc[2],
-                 _mag[0], _mag[1], _mag[2]);
+                 _mag[1], _mag[0], _mag[2]);
 
     //  Copy data from AHRS object to this one
     memcpy((void*)_ypr, (void*)_ahrs.ypr, 3*sizeof(float));
