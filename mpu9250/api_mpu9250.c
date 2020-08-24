@@ -33,7 +33,8 @@ void initMPU9250()
 {
     float gBias[3], aBias[3];
 
-    calibrateMPU9250(gBias, aBias);
+    // Enable on first run to calibrate the sensor.
+    // calibrateMPU9250(gBias, aBias);
 
     // wake up device
     // Clear sleep mode bit (6), enable all sensors
