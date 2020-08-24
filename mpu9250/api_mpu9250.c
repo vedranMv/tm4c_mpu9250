@@ -59,7 +59,7 @@ void initMPU9250()
     // Set sample rate = gyroscope output rate/(1 + SMPLRT_DIV)
     // Use a 200 Hz rate; a rate consistent with the filter update rate
     // determined inset in CONFIG above.
-    HAL_MPU_WriteByte(MPU9250_ADDRESS, SMPLRT_DIV, 0x00);
+    HAL_MPU_WriteByte(MPU9250_ADDRESS, SMPLRT_DIV, 0x04);
 
     // Set gyroscope full scale range
     // Range selects FS_SEL and AFS_SEL are 0 - 3, so 2-bit values are
@@ -73,7 +73,7 @@ void initMPU9250()
     c = c | Gscale << 3; // Set full scale range for the gyro
     // Set Fchoice for the gyro to 11 by writing its inverse to bits 1:0 of
     // GYRO_CONFIG
-    c |= 0x03;
+    //c |= 0x03;
     // Write new GYRO_CONFIG value to register
     HAL_MPU_WriteByte(MPU9250_ADDRESS, GYRO_CONFIG, c);
 
